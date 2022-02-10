@@ -1,17 +1,28 @@
 // Importando express para a construção de rotas
 const express = require('express');
-// Tu podes por a constante express dentro de outra constante ou variavél (É o comum)
+// Tu podes por a constante express dentro de outra constante ou variavél 
 const app = express()
 const path = require('path')
-// User importado 
-const Contato = mongoose.model('Contato')
+const mongoose = require('mongoose')
+// User importado do diretorio models
+require('./models/Contato')
+const Contato = mongoose.model('contato')
 
 
 // Configurações
     // CSS
-    // Para o CSS funcionar com o express é necessário que vc indique a pasta "public" é estática
-    // Assim ele vai buscar o arquivo na pasta "public"
+        // Para o CSS funcionar com o express é necessário que vc indique a pasta "public" é estática
+        // Assim ele vai buscar o arquivo na pasta "public"
         app.use(express.static(__dirname + '/public')) 
+
+    // Mongoose
+        mongoose.Promise = global.Promise
+        mongoose.connect('mongodb://localhost/formulario').then(() => {
+            console.log('O banco de dados está conectado')
+        }).catch((err)=>{
+            console.log('O banco de dados não está conectado. Algo está errado => ' + err)
+        })
+
 
 
 //Essa é a rota para a página principal do teu app
