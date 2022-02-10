@@ -1,8 +1,10 @@
-// Express para a construção de rotas
+// Importando express para a construção de rotas
 const express = require('express');
-// tu podes por a constante express dentro de outra constante ou variavél (É o comum)
+// Tu podes por a constante express dentro de outra constante ou variavél (É o comum)
 const app = express()
 const path = require('path')
+// User importado 
+const Contato = mongoose.model('Contato')
 
 
 // Configurações
