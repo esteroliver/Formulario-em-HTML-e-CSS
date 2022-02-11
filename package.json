@@ -1,0 +1,24 @@
+{
+  "name": "formulario-em-html-e-css",
+  "version": "1.0.0",
+  "description": "![image](https://user-images.githubusercontent.com/86311735/138100229-f1b5771f-d752-416e-bd5a-40499ed595d6.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dayvid-San/Formulario-em-HTML-e-CSS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dayvid-San/Formulario-em-HTML-e-CSS/issues"
+  },
+  "homepage": "https://github.com/Dayvid-San/Formulario-em-HTML-e-CSS#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
+  }
+}
